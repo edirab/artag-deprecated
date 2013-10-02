@@ -39,7 +39,7 @@
 
 
 #include <ARToolKitPlus/MemoryManager.h>
-#include <malloc.h>
+#include <cstdlib>
 
 
 namespace ARToolKitPlus

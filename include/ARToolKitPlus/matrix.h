@@ -41,7 +41,7 @@
 #ifndef __ARTOOLKITMATRIX_HEADERFILE__
 #define __ARTOOLKITMATRIX_HEADERFILE__
 
-#include <math.h>
+#include <cmath>
 #include <ARToolKitPlus/config.h>
 #include <ARToolKitPlus/vector.h>
 

@@ -39,8 +39,8 @@
 
 #define CHECK_CALC 0
 
-//#include <stdlib.h>
-//#include <math.h>
+//#include <cstdlib>
+//#include <cmath>
 //#include <ARToolKitPlus/Tracker.h>
 //#include <ARToolKitPlus/matrix.h>
 

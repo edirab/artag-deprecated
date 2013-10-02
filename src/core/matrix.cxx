@@ -38,13 +38,10 @@
  * ======================================================================== */
 
 
-#include <stdio.h>
-#include <math.h>
-#ifndef __APPLE__
-#include <malloc.h>
-#else
-#include <stdlib.h>
-#endif
+#include <cstdio>
+#include <cmath>
+#include <cstdlib>
+
 #include <ARToolKitPlus/matrix.h>
 
 

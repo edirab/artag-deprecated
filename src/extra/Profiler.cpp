@@ -1,7 +1,7 @@
 
 
 #include <ARToolKitPlus/extra/Profiler.h>
-#include <stdio.h>
+#include <cstdio>
 
 
 namespace ARToolKitPlus {

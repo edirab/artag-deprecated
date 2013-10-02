@@ -68,7 +68,7 @@ namespace ARToolKitPlus
  *  Reduce __MAX_LOAD_PATTERNS and __MAX_IMAGE_PATTERNS to reduce memory footprint.
  */
 template <int __PATTERN_SIZE_X, int __PATTERN_SIZE_Y, int __PATTERN_SAMPLE_NUM, int __MAX_LOAD_PATTERNS=32, int __MAX_IMAGE_PATTERNS=32>
-class TrackerSingleMarkerImpl : public TrackerSingleMarker, protected TrackerImpl<__PATTERN_SIZE_X,__PATTERN_SIZE_Y, __PATTERN_SAMPLE_NUM, __MAX_LOAD_PATTERNS, __MAX_IMAGE_PATTERNS>
+class TrackerSingleMarkerImpl : public TrackerSingleMarker, public TrackerImpl<__PATTERN_SIZE_X,__PATTERN_SIZE_Y, __PATTERN_SAMPLE_NUM, __MAX_LOAD_PATTERNS, __MAX_IMAGE_PATTERNS>
 {
 public:
 	TrackerSingleMarkerImpl(int nWidth=DEF_CAMWIDTH, int nHeight=DEF_CAMHEIGHT);
@@ -178,7 +178,7 @@ protected:
 
 }	// namespace ARToolKitPlus
 
-#include "../src/TrackerSingleMarkerImpl.cxx"
+#include "../../src/TrackerSingleMarkerImpl.cxx"
 
 
 #endif //__ARTOOLKITPLUS_TRACKERSINGLEMARKERIMPL_HEADERFILE__

@@ -4,27 +4,35 @@ Install instructions for Linux:
 Remarks:
 --------
 
-The make environment for Linux is based on Qt's qmake system.
-Please install qmake before compiling ARToolKitPlus!
+The make environment for Linux is based on CMake system.
+Please install CMake before compiling astups/artag!
+The code should be compatible for Windows and Mac, please report any issue related to this.
 
 Compile Steps:
 --------------
 
-- Modify build/linux/options.pro to your needs
-- Set ARTKP environment variable to source tree
+-Create a build directory
+> mkdir build
+> cd build
 
-  for bash: export ARTKP='<path_to_artoolkitplus_source_tree>'
-  for tcsh: setenv ARTKP '<path_to_artoolkitplus_source_tree>'
+-Configure the project
+> cmake .. [-DCMAKE_INSTALL_PREFIX=<some/install/path>]
 
-- Start compilation with
+The option CMAKE_INSTALL_PREFIX allows you to choose where to install the project.
+If the option is not specified the project will be installed systemwide
 
-  make
+-Compile
+> make
 
-- You should end up with
+-Optionnaly install the project
+> make isntall
 
-  ./lib ... ARToolKitPlus shared libraries
-  ./bin ... 
-	    simple   ... Sample program
-	    idpatgen ... For generating ID markers
 
-- For executing, do not forget to update your LD_LIBRARY_PATH
+Other options:
+--------------
+
+You can generate a documentation by calling:
+> make doc
+
+The main page of the documentation will be in the build folder under:
+<build>/doc/html/index.html

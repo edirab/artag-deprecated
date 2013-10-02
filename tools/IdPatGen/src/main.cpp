@@ -90,7 +90,7 @@ int main(int argc, char **argv)
 
 	if(idnumber<0 || idnumber>idMax)
 	{
-		printf("ERROR: invalid id-number %d. must be in rage [0,%d]\n", idnumber, idMax);
+		printf("ERROR: invalid id-number %d. must be in range [0,%d]\n", idnumber, idMax);
 		return -1;
 	}
 

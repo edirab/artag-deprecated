@@ -39,7 +39,7 @@
 
 
 #include <ARToolKitPlus/MemoryManagerMemMap.h>
-#include <assert.h>
+#include <cassert>
 
 
 #if defined(_MSC_VER) || defined(_WIN32_WCE)

@@ -44,6 +44,9 @@
 #include "rpp_const.h"
 #include "rpp_types.h"
 
+#include <cstdlib>
+#include <cstdio>
+
 namespace rpp {
 
 real_t _sin(real_t a);

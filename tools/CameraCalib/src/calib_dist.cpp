@@ -1,7 +1,6 @@
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <malloc.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
 //#include <ARToolKitPlus/param.h>
 //#include <ARToolKitPlus/matrix.h>
 

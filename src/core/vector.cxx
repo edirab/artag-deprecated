@@ -38,14 +38,10 @@
  * ======================================================================== */
 
 
-#include <stdlib.h>
-#include <stdio.h>
-#ifndef __APPLE__
-#include <malloc.h>
-#else
-#include <stdlib.h>
-#endif
-#include <math.h>
+#include <cstdlib>
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 
 #include <ARToolKitPlus/Tracker.h>
 #include <ARToolKitPlus/matrix.h>

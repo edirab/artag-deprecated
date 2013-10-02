@@ -3,7 +3,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = ARToolKitPlus
+PROJECT_NAME           = @PROJECT_NAME@
 PROJECT_NUMBER         = "Version 2.1"
 OUTPUT_DIRECTORY       = .
 CREATE_SUBDIRS         = NO
@@ -80,7 +80,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = ../include/ARToolKitPlus
+INPUT                  = "@PROJECT_SOURCE_DIR@/include/ARToolKitPlus"
 FILE_PATTERNS          = *.c \
                          *.cc \
                          *.cxx \
@@ -107,9 +107,9 @@ FILE_PATTERNS          = *.c \
                          *.mm \
                          *.dox
 RECURSIVE              = NO
-EXCLUDE                = ../include/ARToolKitPlus/TrackerMultiMarkerImpl.h \
-                         ../include/ARToolKitPlus/TrackerSingleMarkerImpl.h \
-                         ../include/ARToolKitPlus/TrackerImpl.h
+EXCLUDE                = "@PROJECT_SOURCE_DIR@/include/ARToolKitPlus/TrackerMultiMarkerImpl.h" \
+                         "@PROJECT_SOURCE_DIR@/include/ARToolKitPlus/TrackerSingleMarkerImpl.h" \
+                         "@PROJECT_SOURCE_DIR@/include/ARToolKitPlus/TrackerImpl.h"
 EXCLUDE_SYMLINKS       = NO
 EXCLUDE_PATTERNS       = 
 EXAMPLE_PATH           = 

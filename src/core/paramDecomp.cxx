@@ -38,8 +38,8 @@
  * ======================================================================== */
 
 
-#include <stdio.h>
-#include <math.h>
+#include <cstdio>
+#include <cmath>
 #include <ARToolKitPlus/Tracker.h>
 #include <ARToolKitPlus/matrix.h>
 

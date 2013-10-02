@@ -42,7 +42,7 @@
 #define __ARTOOLKITMULTI_HEADERFILE__
 
 
-#include <stdio.h>
+#include <cstdio>
 #include <ARToolKitPlus/config.h>
 #include <ARToolKitPlus/param.h>
 #include <ARToolKitPlus/ar.h>

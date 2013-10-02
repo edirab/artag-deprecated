@@ -45,7 +45,6 @@
 #error ARToolKitPlus/TrackerSingleMarkerImpl.cxx should not be compiled directly, but only if included from ARToolKitPlus/TrackerSingleMarkerImpl.h
 #endif
 
-
 namespace ARToolKitPlus
 {
 
@@ -185,7 +184,7 @@ ARSM_TEMPL_TRACKER::calc(const unsigned char* nImage, int nPattern, bool nUpdate
 	if(nUpdateMatrix)
 	{
 		executeSingleMarkerPoseEstimator(&marker_info[k], patt_center, patt_width, patt_trans);
-		convertTransformationMatrixToOpenGLStyle(patt_trans, this->gl_para);
+		this->convertTransformationMatrixToOpenGLStyle(patt_trans, this->gl_para);
 	}
 
 	PROFILE_ENDSEC(profiler, SINGLEMARKER_OVERALL)

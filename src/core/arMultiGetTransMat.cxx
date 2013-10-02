@@ -38,9 +38,9 @@
  * ======================================================================== */
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 #include <ARToolKitPlus/Tracker.h>
 #include <ARToolKitPlus/matrix.h>
 

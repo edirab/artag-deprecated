@@ -38,8 +38,8 @@
  * ======================================================================== */
 
 
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 #include <ARToolKitPlus/Tracker.h>
 
 

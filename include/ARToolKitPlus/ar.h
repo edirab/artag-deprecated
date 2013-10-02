@@ -42,12 +42,8 @@
 #define __ARTOOLKITAR_HEADERFILE__
 
 
-#include <stdio.h>
-#ifndef __APPLE__
-#include <malloc.h>
-#else
-#include <stdlib.h>
-#endif
+#include <cstdio>
+#include <cstdlib>
 
 #include <ARToolKitPlus/config.h>
 #include <ARToolKitPlus/param.h>

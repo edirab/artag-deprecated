@@ -38,9 +38,9 @@
  * ======================================================================== */
 
 
-#include <math.h>
-#include <assert.h>
-#include <stdio.h>
+#include <cmath>
+#include <cassert>
+#include <cstdio>
 
 #include "FixedPoint.h"
 

@@ -33,7 +33,7 @@
 #include "ImageTool.h"
 
 #include <cstdio>
-#include <string>
+#include <cstring>
 
 #if defined(TARGET_HOST_WIN32) || defined(TARGET_HOST_WINCE)
 #include <windows.h>

@@ -41,7 +41,7 @@
 #ifndef __ARTKPFIXEDBASE_GENERIC_HEADERFILE__
 #define __ARTKPFIXEDBASE_GENERIC_HEADERFILE__
 
-#include <assert.h>
+#include <cassert>
 
 
 // Generic MATHBASE implementation for all

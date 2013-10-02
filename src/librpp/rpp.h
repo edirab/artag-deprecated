@@ -46,6 +46,8 @@
 
 #include "rpp_types.h"
 
+#include <cstring>
+
 namespace rpp {
 // ------------------------------------------------------------------------------------------
 void Quaternion_byAngleAndVector(quat_t &Q, const real_t &q_angle, const vec3_t &q_vector);
@@ -57,10 +59,10 @@ void rpyAng(vec3_t &angs, const mat33_t &R);
 void rpyAng_X(vec3_t &ang_zyx, const mat33_t &R);
 void decomposeR(mat33_t &Rz, const mat33_t &R);
 void abskernel(mat33_t &R, vec3_t &t, vec3_array &Qout, real_t &err2, 
-			   const vec3_array _P, const vec3_array _Q, 
+			   const vec3_array v_P, const vec3_array v_Q, 
 			   const mat33_array F, const mat33_t G);
 void objpose(mat33_t &R, vec3_t &t, unsigned int &it, real_t &obj_err, real_t &img_err,
-			 bool calc_img_err, const vec3_array _P, const vec3_array Qp, const options_t options);
+			 bool calc_img_err, const vec3_array v_P, const vec3_array Qp, const options_t options);
 void getRotationY_wrtT(scalar_array &al_ret, vec3_array &tnew, const vec3_array &v,
 					   const vec3_array &p, const vec3_t &t, const real_t &DB,
 					   const mat33_t &Rz);

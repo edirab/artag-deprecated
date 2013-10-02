@@ -1,0 +1,36 @@
+if (NOT EXISTS "@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt")
+        message(FATAL_ERROR "Cannot find install manifest: \"@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt\"")
+endif(NOT EXISTS "@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt")
+
+file(STRINGS "@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt" files)
+foreach (file ${files})
+        message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")
+        execute_process(
+                COMMAND @CMAKE_COMMAND@ -E remove "$ENV{DESTDIR}${file}"
+                OUTPUT_VARIABLE rm_out
+                RESULT_VARIABLE rm_retval
+        )
+        if(NOT ${rm_retval} EQUAL 0)
+                message(FATAL_ERROR "Problem when removing \"$ENV{DESTDIR}${file}\"")
+        endif(NOT ${rm_retval} EQUAL 0)
+        string(REGEX MATCH ".*/@PROJECT_NAME@/" folder ${file})
+        list(APPEND folders ${folder})
+endforeach(file)
+
+#TODO Uncomment and correct one the whole project has been renamed
+#if(folders)
+#        list(REMOVE_DUPLICATES folders)
+#        message(STATUS "Remove folder(s) : ${folders}")
+#        foreach(folder ${folders})
+#                if(EXISTS "$ENV{DESTDIR}${folder}")
+#                        execute_process(
+#                                COMMAND @CMAKE_COMMAND@ -E remove_directory "$ENV{DESTDIR}${folder}"
+#                                OUTPUT_VARIABLE rm_out
+#                                RESULT_VARIABLE rm_retval
+#                        )
+#                        if(NOT ${rm_retval} EQUAL 0)
+#                                message(FATAL_ERROR "Problem when removing \"$ENV{DESTDIR}${folder}\"")
+#                        endif(NOT ${rm_retval} EQUAL 0)
+#                endif(EXISTS "$ENV{DESTDIR}${folder}")
+#        endforeach()
+#endif(folders)

@@ -42,9 +42,9 @@
 #define __ARTKLOGGER_HEADERFILE__
 
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
+#include <cstdio>
+#include <cstdarg>
+#include <cstring>
 
 
 namespace ARToolKitPlus

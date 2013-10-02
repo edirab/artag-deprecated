@@ -1,10 +1,11 @@
-#include <math.h>
-#include <stdio.h>
-#include <malloc.h>
+#include <cmath>
+#include <cstdio>
+#include <cmalloc>
 //#include <AR/ar.h>
 //#include <AR/param.h>
 //#include <AR/matrix.h>
 #include <ARToolKitPlus/Tracker.h>
+#include <ARToolKitPlus/TrackerImpl.h>
 #include "calib_camera.h"
 
 extern ARToolKitPlus::Tracker *theTracker;
@@ -31,7 +32,7 @@ int calc_inp( CALIB_PATT_T *patt, ARFloat dist_factor[4], int xsize, int ysize, 
     for( k = 0; k < patt->loop_num; k++ ) {
         for( j = 0; j < patt->v_num; j++ ) {
             for( i = 0; i < patt->h_num; i++ ) {
-                ARToolKitPlus::Tracker::arParamObserv2Ideal( dist_factor, 
+                ARToolKitPlus::TrackerImpl<6,6,6, 1, 8>::arParamObserv2Ideal( dist_factor, 
                                      patt->point[k][j*patt->h_num+i].x_coord,
                                      patt->point[k][j*patt->h_num+i].y_coord,
                                      &(sp->x_coord), &(sp->y_coord) );

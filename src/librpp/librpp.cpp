@@ -40,7 +40,6 @@
  * @file
  * ======================================================================== */
 
-
 #include "librpp.h"
 #include "rpp.h"
 #include "rpp_vecmat.h"

@@ -1,4 +1,4 @@
-ARToolKitPlus 2.1.1
+astups/artag is a fork of ARToolKitPlus 2.1.1
 
 ARToolKit is a software library that can be used to calculate
 camera position and orientation relative to physical markers
@@ -10,11 +10,9 @@ that adds features, but breaks compatibility due to a new
 class-based API. ARToolKitPlus does not come with integrated
 support for VRML nor does it come with a camera library.
 
-More information can be found at:
-http://studierstube.org/handheld_ar/artoolkitplus.php
+So far, astups/artag only changes the way to build the project.
+Instead of using qmake it uses CMake. The other changes are only
+here to make it compile under Linux.
 
-Please read the F.A.Q. before sending questions:
-http://studierstube.icg.tu-graz.ac.at/handheld_ar/faq.php
-
-For any open issues please contact:
-daniel@icg.tu-graz.ac.at
+This version is supported by the ASTUPS, contact:
+astups [at] gmail.com

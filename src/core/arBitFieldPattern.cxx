@@ -41,8 +41,8 @@
 #include <ARToolKitPlus/Tracker.h>
 #include <ARToolKitPlus/arBitFieldPattern.h>
 
-#include <assert.h>
-#include <memory.h>
+#include <cassert>
+#include <cstring>
 
 
 namespace ARToolKitPlus {

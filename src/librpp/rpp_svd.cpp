@@ -36,8 +36,8 @@
 #ifndef _NO_LIBRPP_
 
 
-#include <math.h>
-#include <assert.h>
+#include <cmath>
+#include <cassert>
 
 #include "rpp_types.h"
 

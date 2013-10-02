@@ -39,7 +39,7 @@
 
 
 #include <ARToolKitPlus/Tracker.h>
-#include <stdio.h>
+#include <cstdio>
 
 
 namespace ARToolKitPlus {

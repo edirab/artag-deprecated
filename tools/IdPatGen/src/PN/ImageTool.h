@@ -36,6 +36,8 @@
 #include "PocketKnife.h"
 #include "Image.h"
 
+#include <string.h>
+
 
 namespace PN
 {

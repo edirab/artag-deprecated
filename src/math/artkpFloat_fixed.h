@@ -41,8 +41,8 @@
 #ifndef __ARTKPFLOAT_FIXED_HEADERFILE__
 #define __ARTKPFLOAT_FIXED_HEADERFILE__
 
-#include <math.h>
-#include <assert.h>
+#include <cmath>
+#include <cassert>
 
 #pragma warning ( push )
 #pragma warning ( disable: 4293 )		// fix warning about shifting in conversion constructor

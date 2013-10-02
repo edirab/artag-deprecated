@@ -41,8 +41,8 @@
 #ifndef __BCH_CODE__H__
 #define __BCH_CODE__H__
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <vector>
 
 
