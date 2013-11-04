@@ -15,8 +15,8 @@ int main(int, char**)
 	}
 	
 	//Change camera-frame size
-//	camera.set(CV_CAP_PROP_FRAME_WIDTH, 640);
-//	camera.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
+	camera.set(CV_CAP_PROP_FRAME_WIDTH, 640);
+	camera.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
 	std::cout<<"The camera has a resolution of "<<camera.get(CV_CAP_PROP_FRAME_WIDTH)<<"x"<<camera.get(CV_CAP_PROP_FRAME_HEIGHT)<<std::endl;
 
 	//Start the multi-tracker to detect the tags
@@ -39,8 +39,7 @@ int main(int, char**)
 	}
 	
 	namedWindow("camera",1);
-	for(;;)
-	{
+	for(;;){
 		Mat frame;
 		camera >> frame; // get a new frame from camera
 
@@ -48,6 +47,15 @@ int main(int, char**)
 
 		int numberDetected = tracker->calc((unsigned char *)frame.data);
 		std::cout<<"Detected markers = "<<numberDetected<<std::endl;
+		if(numberDetected!=0){
+			std::cout<<"\tFound: ";
+			int *foundMarkerIDs;
+			tracker->getDetectedMarkers(foundMarkerIDs);
+			for(size_t multiMarkerCounter=0; multiMarkerCounter<numberDetected; multiMarkerCounter++){
+				std::cout<<foundMarkerIDs[multiMarkerCounter]<<"    ";
+			}
+			std::cout<<std::endl;
+		}
 		
 		if(waitKey(30) >= 0) break;
 	}
