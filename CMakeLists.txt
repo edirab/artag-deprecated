@@ -17,6 +17,7 @@ endif(COMPILE_CALIB)
 add_subdirectory(src)
 add_subdirectory(tools)
 add_subdirectory(sample)
+add_subdirectory(astups)
 
 #Documentation
 find_package(Doxygen QUIET)
