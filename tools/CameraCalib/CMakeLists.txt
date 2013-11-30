@@ -1,5 +1,6 @@
-message(FATAL_ERROR "This option is not available for the moment")
+#message(FATAL_ERROR "This option is not available for the moment")
 
-file(GLOB CALIB_FILES src/*.cpp)
-add_executable(cameracalib ${CALIB_FILES})
-target_link_libraries(cameracalib ${OpenGL_LIBRARIES} ARToolKitPlus)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIR})
+add_executable(cameracalib camera_calibration.cpp)
+target_link_libraries(cameracalib ${OpenCV_LIBRARIES} ARToolKitPlus)
