@@ -40,11 +40,14 @@
  * @file
  * ======================================================================== */
 
+#define LIBRPP_DLL
+//#define LIBRPP_EXPORTS
+
 #if defined(_MSC_VER) || defined(_WIN32_WCE)
 
 #ifdef LIBRPP_STATIC
 #  define LIBRPP_API
-#elif LIBRPP_DLL
+#elif defined LIBRPP_DLL
 #  ifdef LIBRPP_EXPORTS
 #    define LIBRPP_API __declspec(dllexport)
 #  else

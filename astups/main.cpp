@@ -3,6 +3,7 @@
 #include <opencv2/opencv.hpp>
 
 #include <ARToolKitPlus/TrackerMultiMarkerImpl.h>
+#include <ARToolKitPlus/extra/Profiler.h>
 
 using namespace cv;
 
@@ -15,9 +16,9 @@ int main(int, char**)
 	}
 	
 	//Change camera-frame size
-	camera.set(CV_CAP_PROP_FRAME_WIDTH, 640);
-	camera.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
-	std::cout<<"The camera has a resolution of "<<camera.get(CV_CAP_PROP_FRAME_WIDTH)<<"x"<<camera.get(CV_CAP_PROP_FRAME_HEIGHT)<<std::endl;
+	camera.set(CAP_PROP_FRAME_WIDTH, 640);
+	camera.set(CAP_PROP_FRAME_HEIGHT, 480);
+	std::cout<<"The camera has a resolution of "<<camera.get(CAP_PROP_FRAME_WIDTH)<<"x"<<camera.get(CAP_PROP_FRAME_HEIGHT)<<std::endl;
 
 	//Start the multi-tracker to detect the tags
 	//  - 6x6 sized marker images
@@ -25,7 +26,7 @@ int main(int, char**)
 	//  - works with luminance (gray) images
 	//  - can load a maximum of 1 pattern
 	//  - can detect a maximum of 8 patterns in one image
-	ARToolKitPlus::TrackerMultiMarker *tracker = new ARToolKitPlus::TrackerMultiMarkerImpl<6,6,6, 1, 16>(camera.get(CV_CAP_PROP_FRAME_WIDTH), camera.get(CV_CAP_PROP_FRAME_HEIGHT));
+	ARToolKitPlus::TrackerMultiMarker *tracker = new ARToolKitPlus::TrackerMultiMarkerImpl<6,6,6, 1, 16>(camera.get(CAP_PROP_FRAME_WIDTH), camera.get(CAP_PROP_FRAME_HEIGHT));
 	
 //	tracker->setPixelFormat(ARToolKitPlus::PIXEL_FORMAT_LUM); //Uncomment if gray-level image
 	tracker->setBorderWidth(0.125f);

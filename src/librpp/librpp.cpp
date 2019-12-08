@@ -43,6 +43,8 @@
 #include "librpp.h"
 #include "rpp.h"
 #include "rpp_vecmat.h"
+#include <Windows.h>
+
 using namespace rpp;
 
 #ifdef LIBRPP_DLL

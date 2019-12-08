@@ -44,6 +44,7 @@
 
 #include <ARToolKitPlus/Logger.h>
 
+#define ARTOOLKITPLUS_DLL
 
 #ifdef ARTOOLKITPLUS_DLL
 #  ifdef ARTOOLKITPLUS_EXPORTS
